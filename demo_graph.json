@@ -1,0 +1,157 @@
+{
+  "name": "DemoProject",
+  "metadata": {},
+  "nodes": {
+    "java:src/main/java/UserService.java": {
+      "file_path": "src/main/java/UserService.java",
+      "file_name": "UserService.java",
+      "language": "java",
+      "container_name": "com.demo.service",
+      "qualified_name": "com.demo.service.UserService.java",
+      "dependency_statements": [
+        {
+          "target": "com.demo.model.User",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 5
+        },
+        {
+          "target": "java.util.List",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": null
+        },
+        {
+          "target": "org.springframework.stereotype.Service",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": null
+        },
+        {
+          "target": "javax.validation.constraints.NotNull",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": null
+        }
+      ],
+      "exports": [
+        "UserService"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.demo.service",
+        "classes": [
+          "UserValidator",
+          "UserService"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "UserService": "public",
+          "UserValidator": "package-private"
+        }
+      }
+    },
+    "java:src/main/java/User.java": {
+      "file_path": "src/main/java/User.java",
+      "file_name": "User.java",
+      "language": "java",
+      "container_name": "com.demo.model",
+      "qualified_name": "com.demo.model.User.java",
+      "dependency_statements": [],
+      "exports": [
+        "User"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.demo.model",
+        "classes": [
+          "User"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "User": "public"
+        }
+      }
+    },
+    "python:src/utils.py": {
+      "file_path": "src/utils.py",
+      "file_name": "utils.py",
+      "language": "python",
+      "container_name": "demo.utils",
+      "qualified_name": "demo.utils.utils.py",
+      "dependency_statements": [],
+      "exports": [
+        "ValidationError",
+        "hash_password",
+        "validate_email"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "module_name": "demo.utils",
+        "functions": [
+          "hash_password",
+          "validate_email"
+        ],
+        "classes": [
+          "ValidationError"
+        ],
+        "variables": [],
+        "is_package_init": false
+      }
+    },
+    "csharp:Controllers/UserController.cs": {
+      "file_path": "Controllers/UserController.cs",
+      "file_name": "UserController.cs",
+      "language": "csharp",
+      "container_name": "Demo.Controllers",
+      "qualified_name": "Demo.Controllers.UserController.cs",
+      "dependency_statements": [],
+      "exports": [
+        "UserController"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "namespace": "Demo.Controllers",
+        "classes": [
+          "UserController"
+        ],
+        "interfaces": [],
+        "structs": [],
+        "access_modifiers": {
+          "UserController": "public"
+        }
+      }
+    }
+  },
+  "links": {
+    "java:src/main/java/UserService.java->java:src/main/java/User.java": {
+      "source_node_id": "java:src/main/java/UserService.java",
+      "target_node_id": "java:src/main/java/User.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.demo.model.User",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 5
+        }
+      ],
+      "weight": 1.0,
+      "metadata": {}
+    }
+  },
+  "metrics": {
+    "num_nodes": 4,
+    "num_edges": 1,
+    "density": 0.08333333333333333,
+    "is_dag": true,
+    "num_weakly_connected_components": 3,
+    "num_strongly_connected_components": 4,
+    "cycles": 0
+  }
+}

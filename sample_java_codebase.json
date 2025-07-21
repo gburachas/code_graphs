@@ -1,0 +1,938 @@
+{
+  "name": "SampleJavaCodebase",
+  "metadata": {
+    "description": "Sample Java codebase for testing dependency analysis",
+    "generated": true,
+    "language": "java"
+  },
+  "nodes": {
+    "java:src/main/java/com/example/core/A.java": {
+      "file_path": "src/main/java/com/example/core/A.java",
+      "file_name": "A.java",
+      "language": "java",
+      "container_name": "com.example.core",
+      "qualified_name": "com.example.core.A.java",
+      "dependency_statements": [
+        {
+          "target": "com.example.util.StringUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 10
+        },
+        {
+          "target": "com.example.util.ValidationUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 2
+        },
+        {
+          "target": "java.math.BigDecimal",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 2
+        },
+        {
+          "target": "javax.validation.constraints.NotNull",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 7
+        },
+        {
+          "target": "java.util.HashMap",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 7
+        },
+        {
+          "target": "org.springframework.stereotype.Service",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 8
+        },
+        {
+          "target": "java.util.ArrayList",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 7
+        }
+      ],
+      "exports": [
+        "User"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.example.core",
+        "classes": [
+          "UserService",
+          "User"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "User": "public",
+          "UserService": "package-private"
+        }
+      }
+    },
+    "java:src/main/java/com/example/core/B.java": {
+      "file_path": "src/main/java/com/example/core/B.java",
+      "file_name": "B.java",
+      "language": "java",
+      "container_name": "com.example.core",
+      "qualified_name": "com.example.core.B.java",
+      "dependency_statements": [
+        {
+          "target": "com.example.util.DateUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        },
+        {
+          "target": "lombok.Data",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 10
+        },
+        {
+          "target": "org.springframework.stereotype.Service",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 7
+        }
+      ],
+      "exports": [
+        "ProductManager"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.example.core",
+        "classes": [
+          "ProductManager",
+          "Product"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "Product": "package-private",
+          "ProductManager": "public"
+        }
+      }
+    },
+    "java:src/main/java/com/example/model/C.java": {
+      "file_path": "src/main/java/com/example/model/C.java",
+      "file_name": "C.java",
+      "language": "java",
+      "container_name": "com.example.model",
+      "qualified_name": "com.example.model.C.java",
+      "dependency_statements": [
+        {
+          "target": "com.example.core.User",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 1
+        },
+        {
+          "target": "com.example.core.Product",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 5
+        },
+        {
+          "target": "com.example.model.Customer",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        },
+        {
+          "target": "java.util.List",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 5
+        },
+        {
+          "target": "javax.validation.constraints.NotNull",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        },
+        {
+          "target": "java.time.LocalDateTime",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 8
+        },
+        {
+          "target": "java.util.HashMap",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 9
+        }
+      ],
+      "exports": [
+        "Order",
+        "OrderItem"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.example.model",
+        "classes": [
+          "Order",
+          "OrderItem"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "Order": "public",
+          "OrderItem": "public"
+        }
+      }
+    },
+    "java:src/main/java/com/example/model/D.java": {
+      "file_path": "src/main/java/com/example/model/D.java",
+      "file_name": "D.java",
+      "language": "java",
+      "container_name": "com.example.model",
+      "qualified_name": "com.example.model.D.java",
+      "dependency_statements": [
+        {
+          "target": "com.example.util.StringUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        },
+        {
+          "target": "org.springframework.web.bind.annotation.RestController",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 4
+        },
+        {
+          "target": "java.math.BigDecimal",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 6
+        },
+        {
+          "target": "java.util.ArrayList",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 8
+        },
+        {
+          "target": "java.time.LocalDateTime",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 13
+        },
+        {
+          "target": "com.fasterxml.jackson.annotation.JsonProperty",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 6
+        }
+      ],
+      "exports": [
+        "Address",
+        "Customer"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.example.model",
+        "classes": [
+          "Address",
+          "Customer"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "Customer": "public",
+          "Address": "public"
+        }
+      }
+    },
+    "java:src/main/java/com/example/service/E.java": {
+      "file_path": "src/main/java/com/example/service/E.java",
+      "file_name": "E.java",
+      "language": "java",
+      "container_name": "com.example.service",
+      "qualified_name": "com.example.service.E.java",
+      "dependency_statements": [
+        {
+          "target": "com.example.core.User",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        },
+        {
+          "target": "com.example.core.UserService",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 8
+        },
+        {
+          "target": "com.example.util.ValidationUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 8
+        },
+        {
+          "target": "org.springframework.stereotype.Service",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 6
+        },
+        {
+          "target": "java.math.BigDecimal",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 9
+        },
+        {
+          "target": "lombok.AllArgsConstructor",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 9
+        },
+        {
+          "target": "com.fasterxml.jackson.annotation.JsonProperty",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 13
+        }
+      ],
+      "exports": [],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.example.service",
+        "classes": [
+          "AuthenticationService"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "AuthenticationService": "package-private"
+        }
+      }
+    },
+    "java:src/main/java/com/example/service/F.java": {
+      "file_path": "src/main/java/com/example/service/F.java",
+      "file_name": "F.java",
+      "language": "java",
+      "container_name": "com.example.service",
+      "qualified_name": "com.example.service.F.java",
+      "dependency_statements": [
+        {
+          "target": "com.example.model.Order",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        },
+        {
+          "target": "com.example.model.Customer",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        },
+        {
+          "target": "java.util.HashMap",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 1
+        },
+        {
+          "target": "java.util.List",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        },
+        {
+          "target": "lombok.AllArgsConstructor",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 9
+        },
+        {
+          "target": "java.math.BigDecimal",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 6
+        }
+      ],
+      "exports": [
+        "PaymentService",
+        "PaymentProcessor"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.example.service",
+        "classes": [
+          "PaymentService",
+          "PaymentProcessor"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "PaymentService": "public",
+          "PaymentProcessor": "public"
+        }
+      }
+    },
+    "java:src/main/java/com/example/util/G.java": {
+      "file_path": "src/main/java/com/example/util/G.java",
+      "file_name": "G.java",
+      "language": "java",
+      "container_name": "com.example.util",
+      "qualified_name": "com.example.util.G.java",
+      "dependency_statements": [
+        {
+          "target": "java.util.List",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 2
+        },
+        {
+          "target": "javax.validation.constraints.NotNull",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 7
+        },
+        {
+          "target": "java.time.LocalDateTime",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 4
+        },
+        {
+          "target": "org.springframework.web.bind.annotation.GetMapping",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 4
+        },
+        {
+          "target": "lombok.Data",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 11
+        }
+      ],
+      "exports": [
+        "StringUtils"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.example.util",
+        "classes": [
+          "StringUtils",
+          "DateUtils"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "StringUtils": "public",
+          "DateUtils": "package-private"
+        }
+      }
+    },
+    "java:src/main/java/com/example/util/H.java": {
+      "file_path": "src/main/java/com/example/util/H.java",
+      "file_name": "H.java",
+      "language": "java",
+      "container_name": "com.example.util",
+      "qualified_name": "com.example.util.H.java",
+      "dependency_statements": [
+        {
+          "target": "java.math.BigDecimal",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 11
+        },
+        {
+          "target": "org.springframework.stereotype.Service",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 6
+        },
+        {
+          "target": "org.springframework.web.bind.annotation.RestController",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 5
+        },
+        {
+          "target": "lombok.AllArgsConstructor",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 7
+        },
+        {
+          "target": "com.example.util.StringUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 8
+        }
+      ],
+      "exports": [],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.example.util",
+        "classes": [
+          "ValidationUtils"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "ValidationUtils": "package-private"
+        }
+      }
+    },
+    "java:src/main/java/com/example/controller/I.java": {
+      "file_path": "src/main/java/com/example/controller/I.java",
+      "file_name": "I.java",
+      "language": "java",
+      "container_name": "com.example.controller",
+      "qualified_name": "com.example.controller.I.java",
+      "dependency_statements": [
+        {
+          "target": "com.example.core.User",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 1
+        },
+        {
+          "target": "com.example.core.UserService",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 10
+        },
+        {
+          "target": "com.example.service.AuthenticationService",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 6
+        },
+        {
+          "target": "org.springframework.web.bind.annotation.GetMapping",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 8
+        },
+        {
+          "target": "java.util.HashMap",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 13
+        }
+      ],
+      "exports": [
+        "UserController"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.example.controller",
+        "classes": [
+          "UserController"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "UserController": "public"
+        }
+      }
+    },
+    "java:src/main/java/com/example/controller/J.java": {
+      "file_path": "src/main/java/com/example/controller/J.java",
+      "file_name": "J.java",
+      "language": "java",
+      "container_name": "com.example.controller",
+      "qualified_name": "com.example.controller.J.java",
+      "dependency_statements": [
+        {
+          "target": "com.example.core.Product",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 1
+        },
+        {
+          "target": "com.example.core.ProductManager",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 7
+        },
+        {
+          "target": "com.example.service.PaymentService",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 6
+        },
+        {
+          "target": "org.springframework.web.bind.annotation.GetMapping",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 7
+        },
+        {
+          "target": "java.util.List",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 9
+        },
+        {
+          "target": "java.time.LocalDateTime",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 4
+        }
+      ],
+      "exports": [
+        "ProductController"
+      ],
+      "metadata": {},
+      "language_specific": {
+        "package_name": "com.example.controller",
+        "classes": [
+          "ProductController"
+        ],
+        "interfaces": [],
+        "access_modifiers": {
+          "ProductController": "public"
+        }
+      }
+    }
+  },
+  "links": {
+    "java:src/main/java/com/example/core/A.java->java:src/main/java/com/example/util/G.java": {
+      "source_node_id": "java:src/main/java/com/example/core/A.java",
+      "target_node_id": "java:src/main/java/com/example/util/G.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.util.StringUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 10
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/core/A.java->java:src/main/java/com/example/util/H.java": {
+      "source_node_id": "java:src/main/java/com/example/core/A.java",
+      "target_node_id": "java:src/main/java/com/example/util/H.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.util.ValidationUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 2
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/core/B.java->java:src/main/java/com/example/util/G.java": {
+      "source_node_id": "java:src/main/java/com/example/core/B.java",
+      "target_node_id": "java:src/main/java/com/example/util/G.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.util.DateUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/model/C.java->java:src/main/java/com/example/core/A.java": {
+      "source_node_id": "java:src/main/java/com/example/model/C.java",
+      "target_node_id": "java:src/main/java/com/example/core/A.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.core.User",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 1
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/model/C.java->java:src/main/java/com/example/core/B.java": {
+      "source_node_id": "java:src/main/java/com/example/model/C.java",
+      "target_node_id": "java:src/main/java/com/example/core/B.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.core.Product",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 5
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/model/C.java->java:src/main/java/com/example/model/D.java": {
+      "source_node_id": "java:src/main/java/com/example/model/C.java",
+      "target_node_id": "java:src/main/java/com/example/model/D.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.model.Customer",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/service/E.java->java:src/main/java/com/example/core/A.java": {
+      "source_node_id": "java:src/main/java/com/example/service/E.java",
+      "target_node_id": "java:src/main/java/com/example/core/A.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.core.User",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        },
+        {
+          "target": "com.example.core.UserService",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 8
+        }
+      ],
+      "weight": 2,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/service/E.java->java:src/main/java/com/example/util/H.java": {
+      "source_node_id": "java:src/main/java/com/example/service/E.java",
+      "target_node_id": "java:src/main/java/com/example/util/H.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.util.ValidationUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 8
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/service/F.java->java:src/main/java/com/example/model/C.java": {
+      "source_node_id": "java:src/main/java/com/example/service/F.java",
+      "target_node_id": "java:src/main/java/com/example/model/C.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.model.Order",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/service/F.java->java:src/main/java/com/example/model/D.java": {
+      "source_node_id": "java:src/main/java/com/example/service/F.java",
+      "target_node_id": "java:src/main/java/com/example/model/D.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.model.Customer",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/controller/I.java->java:src/main/java/com/example/core/A.java": {
+      "source_node_id": "java:src/main/java/com/example/controller/I.java",
+      "target_node_id": "java:src/main/java/com/example/core/A.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.core.User",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 1
+        },
+        {
+          "target": "com.example.core.UserService",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 10
+        }
+      ],
+      "weight": 2,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/controller/I.java->java:src/main/java/com/example/service/E.java": {
+      "source_node_id": "java:src/main/java/com/example/controller/I.java",
+      "target_node_id": "java:src/main/java/com/example/service/E.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.service.AuthenticationService",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 6
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/controller/J.java->java:src/main/java/com/example/core/B.java": {
+      "source_node_id": "java:src/main/java/com/example/controller/J.java",
+      "target_node_id": "java:src/main/java/com/example/core/B.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.core.Product",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 1
+        },
+        {
+          "target": "com.example.core.ProductManager",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 7
+        }
+      ],
+      "weight": 2,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/controller/J.java->java:src/main/java/com/example/service/F.java": {
+      "source_node_id": "java:src/main/java/com/example/controller/J.java",
+      "target_node_id": "java:src/main/java/com/example/service/F.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.service.PaymentService",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 6
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/model/D.java->java:src/main/java/com/example/util/G.java": {
+      "source_node_id": "java:src/main/java/com/example/model/D.java",
+      "target_node_id": "java:src/main/java/com/example/util/G.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.util.StringUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 3
+        }
+      ],
+      "weight": 1,
+      "metadata": {}
+    },
+    "java:src/main/java/com/example/util/H.java->java:src/main/java/com/example/util/G.java": {
+      "source_node_id": "java:src/main/java/com/example/util/H.java",
+      "target_node_id": "java:src/main/java/com/example/util/G.java",
+      "dependency_type": "intrinsic_import",
+      "dependency_statements": [
+        {
+          "target": "com.example.util.StringUtils",
+          "statement_type": "import",
+          "alias": null,
+          "is_wildcard": false,
+          "line_number": 8
+        }
+      ],
+      "weight": 1.0,
+      "metadata": {}
+    }
+  },
+  "metrics": {
+    "num_nodes": 10,
+    "num_edges": 16,
+    "density": 0.17777777777777778,
+    "is_dag": true,
+    "num_weakly_connected_components": 1,
+    "num_strongly_connected_components": 10,
+    "cycles": 0
+  }
+}
